@@ -55,3 +55,13 @@ jobs:
           service: backend-service
           cluster: backend-service-cluster
           wait-for-service-stability: true
+
+      - name: Send Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: "Deploy thành công 🚀"
+          SLACK_MESSAGE: "Image `${{ github.event.workflow_run.head_sha }}` đã được deploy lên ECS"
+          SLACK_COLOR: "good"
+          SLACK_USERNAME: "GitHub Actions"
+          SLACK_ICON: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
