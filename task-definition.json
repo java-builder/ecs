@@ -11,7 +11,7 @@
       "image": "placeholder",
       "environment": [
         {
-          "name": "APP_MESSAGE", "value": "\uD83D\uDE80 Running on Amazon ECS — Containerized & Scalable!"
+          "name": "APP_MESSAGE", "value": "\"Deployed successfully! \uD83D\uDEE0\uFE0F Spring Boot running on Amazon ECS Fargate\""
         }
       ],
       "essential": true,
