@@ -8,7 +8,7 @@ public class ECSController {
 
     @GetMapping
     public String ecsContainer() {
-        return "🚀 Running on Amazon ECS — Containerized & Scalable!";
+        return "Hello from ECS! Instance: " + System.getenv("HOSTNAME");
     }
 
 }
