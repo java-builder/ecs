@@ -16,7 +16,7 @@ permissions:
 
 env:
   AWS_REGION: ap-southeast-1
-  ECR_REPOSITORY: duclk/cicd-pipeline
+  ECR_REPOSITORY: duclk/backend-service
   CONTAINER_NAME: backend-service
 
 jobs:
