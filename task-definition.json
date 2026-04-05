@@ -7,7 +7,7 @@
   "executionRoleArn": "arn:aws:iam::179776888307:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "cicd-pipeline",
+      "name": "backend-service",
       "image": "duclk/cicd-pipeline:latest",
       "environment": [
         {
