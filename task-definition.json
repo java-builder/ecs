@@ -1,0 +1,27 @@
+{
+  "family": "backend-service",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::179776888307:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "cicd-pipeline",
+      "image": "duclk/cicd-pipeline:latest",
+      "environment": [
+        {
+          "name": "APP_MESSAGE", "value": "\uD83D\uDE80 Running on Amazon ECS — Containerized & Scalable!"
+        }
+      ],
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
