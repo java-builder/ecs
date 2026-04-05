@@ -41,6 +41,9 @@ jobs:
           image: ${{ secrets.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.event.workflow_run.head_sha }}
           container-name: ${{ env.CONTAINER_NAME }}
 
+      - name: Debug task definition
+        run: cat task-definition.json | jq '.containerDefinitions[].name'
+
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
