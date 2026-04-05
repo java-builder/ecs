@@ -8,7 +8,7 @@
   "containerDefinitions": [
     {
       "name": "backend-service",
-      "image": "duclk/cicd-pipeline:latest",
+      "image": "placeholder",
       "environment": [
         {
           "name": "APP_MESSAGE", "value": "\uD83D\uDE80 Running on Amazon ECS — Containerized & Scalable!"
